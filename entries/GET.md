@@ -1,0 +1,2 @@
+# GET
+El método **GET** solicita una representación del recurso especificado. Las solicitudes que usan GET solo deben recuperar datos y no deben tener ningún otro efecto. (Esto también es cierto para algunos otros métodos **HTTP**.)

@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search | {{result}}
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col">
+        <h4>Results for: '{{ result }}'</h4>
+        <h4>Pages Found({{ found }})</h4>
+        </div>
+    </div>
+    <ul>
+    {% for entry in entries %}
+    <li><a href="{% url 'entry' entry %}">{{ entry }}</a></li>
+    {% empty %}
+        entries not found
+    {% endfor %}
+    </ul>
+{% endblock %}
