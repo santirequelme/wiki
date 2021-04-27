@@ -1,39 +1,53 @@
-{% load static %}
-
 <!DOCTYPE html>
+<html>
+<head>
+<title>Santi Dev</title>
+</head>
+<body>
+      <h1>Santi Dev</h1>
+      <img src="https://avatars.githubusercontent.com/u/65666330?s=400&u=0fb1e373d54922ef40a914aaecfc6487ae121194&v=4" 
+        alt="foto perfil" width="150" height="150">
+      <p>On my way to becoming a Full Stack Developer, I like challenges and I'm interested in
+        technologies and frameworks that can help people and companies to improve their growth and development processes. Excellent communication and interpersonal skills, great capacity for fast and proactive learning, teamwork is assured progress.
+        Creativity and orientation to solve problems. Good sense of humor. Attention to details..
+      </p>
+      <h3>Contact me!</h3>
+      <p><b>email:</b> santiago.requelme.e@darwoft.com</p>
+      <a href="https://t.me/santirequelme">TELEGRAM</a> 
 
-<html lang="en">
-    <head>
-        <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
-    </head>
-    <body>
-        <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
-                <form action="{% url 'search' %}" method="POST">
-                    {% csrf_token %}
-                    <input type="text" name="title" placeholder="Search Encyclopedia">
-                    <input class="btn btn-outline-primary da" type="submit" value="Search">
-                </form>
-                <div>
-                    <a href="{% url 'index' %}">Home</a>
-                </div>
-                <div>
-                    <a href="{% url 'create' %}">Create New Page</a>
-                </div>
-                <div>
-                    <a href="{% url 'random' %}">Random Page</a>
-                </div>
-                {% block nav %}
-                {% endblock %}
-            </div>
-            <div class="main col-lg-10 col-md-9">
-                {% block body %}
-                {% endblock %}
-            </div>
-        </div>
+      <section>
+          <h3>Personal Experience</h3>
+          <p>In my first steps on my career as a Full Stack developer 
+            I have done some personal web projects for the completion 
+            of a web programming course based on technologies, 
+            such as python, django javascript, html, css, bootstrap, sqlite, 
+            and recently starting in the React JS environment, Node JS,
+            express and typescript.
+          </p>
+      </section>
+      <h3>Languages</h3>
+      <ul>
+        <li>Spanish: Mother tongue</li>
+        <li>English: Advanced</li>
+        <li>Portuguese: Advanced</li>
+      </ul>
+      <section>
 
-    </body>
+      </section>
+      <aside>
+        <h3>Hobbies</h3>
+        <ul>
+          <li>surf</li>
+          <li>play guitar</li>
+          <li>djing</li>
+        </ul>
+      </aside>
+      <footer>
+        SANTIAGO REQUELME 2021 
+      </footer>
+
+  
+  
+
+</body>
 </html>
